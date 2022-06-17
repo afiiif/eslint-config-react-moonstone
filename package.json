@@ -1,0 +1,59 @@
+{
+  "name": "eslint-config-react-moonstone",
+  "version": "1.0.0",
+  "description": "ESLint config for React TypeScript projects",
+  "keywords": [
+    "eslint",
+    "config",
+    "react",
+    "javascript",
+    "typescript",
+    "linter",
+    "airbnb"
+  ],
+  "author": "Muhammad Afifudin",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    ".eslintrc.js"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.5.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-sonarjs": "^0.13.0",
+    "eslint-plugin-testing-library": "^5.5.1",
+    "eslint-plugin-unicorn": "^42.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "eslint": "^8.17.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.2",
+    "prettier": "^2.6.2"
+  },
+  "peerDependencies": {
+    "eslint": "^8.16.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint --quiet --fix",
+    "*.{js,md}": "prettier --write"
+  }
+}
