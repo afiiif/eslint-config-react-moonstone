@@ -13,6 +13,14 @@
   ],
   "author": "Muhammad Afifudin",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afiiif/eslint-config-react-moonstone"
+  },
+  "bugs": {
+    "url": "https://github.com/afiiif/eslint-config-react-moonstone/issues"
+  },
+  "homepage": "https://github.com/afiiif/eslint-config-react-moonstone#readme",
   "main": "index.js",
   "files": [
     "index.js",

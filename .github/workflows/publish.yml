@@ -1,0 +1,33 @@
+name: Quality Check & Publish
+
+on:
+  push:
+    branches: [main, beta]
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  lint:
+    name: ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
+      - name: Lint files
+        run: yarn lint
+
+  publish:
+    name: Publish to NPM
+    needs: lint
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/beta'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
+      - name: Release package
+        run: npx semantic-release@19
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
