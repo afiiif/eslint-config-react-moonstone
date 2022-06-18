@@ -5,15 +5,13 @@ ESLint config for React TypeScript projects.
 This config extends [eslint-config-airbnb-typescript](https://www.npmjs.com/package/eslint-config-airbnb-typescript) and [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier).
 It provides some useful plugins which will improve your code quality.
 
-## Installation
+## Installation (including peer dependencies)
 
 ```sh
-npm install -D eslint-config-react-moonstone
+npm install -D eslint-config-react-moonstone @typescript-eslint/eslint-plugin @typescript-eslint/parser
 # or with yarn
-yarn add -D eslint-config-react-moonstone
+yarn add -D eslint-config-react-moonstone @typescript-eslint/eslint-plugin @typescript-eslint/parser
 ```
-
-> 💡 Make sure [ESLint](https://www.npmjs.com/package/eslint) is also installed.
 
 ## Setup
 
@@ -84,11 +82,7 @@ Then update your ESLint config file:
 
 **[eslint-config-react-moonstone](https://www.npmjs.com/package/eslint-config-react-moonstone)** will include these packages:
 
-- TypeScript ESLint
-  - [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin)
-  - [@typescript-eslint/parser](https://www.npmjs.com/package/@typescript-eslint/parser)
-  - [eslint-import-resolver-typescript](https://www.npmjs.com/package/eslint-import-resolver-typescript)
-- ESLint Plugins
+- ESLint Plugins/Resolver
   - [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)
   - [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)
   - [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
@@ -97,6 +91,7 @@ Then update your ESLint config file:
   - [eslint-plugin-simple-import-sort](https://www.npmjs.com/package/eslint-plugin-simple-import-sort)
   - [eslint-plugin-sonarjs](https://www.npmjs.com/package/eslint-plugin-sonarjs)
   - [eslint-plugin-unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn)
+  - [eslint-import-resolver-typescript](https://www.npmjs.com/package/eslint-import-resolver-typescript)
 - ESLint Configs
   - [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
   - [eslint-config-airbnb-typescript](https://www.npmjs.com/package/eslint-config-airbnb-typescript)
