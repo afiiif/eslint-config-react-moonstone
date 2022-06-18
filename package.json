@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-react-moonstone",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ESLint config for React TypeScript projects",
   "keywords": [
     "eslint",

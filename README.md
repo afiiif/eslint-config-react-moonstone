@@ -42,44 +42,43 @@ The order of the array items depends on your needs.
 ### 2) Configure the ESLint TypeScript parser
 
 - Set [parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#usage) to `@typescript-eslint/parser`.
-- Set [parserOptions.project](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#parseroptionsproject) to the path of your `tsconfig.json` or `tsconfig.eslint.json` (see FAQ below).
+- Set [parserOptions.project](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#parseroptionsproject) to the path of your `tsconfig.json` or `tsconfig.eslint.json` (see [FAQ](#faq) below).
 
 For example:
 
 ```diff
 {
-  extends: ['react-moonstone'],
-+ parser: '@typescript-eslint/parser',
-+ parserOptions: {
-+   project: './tsconfig.json'
+  "extends": ["react-moonstone"],
++ "parser": "@typescript-eslint/parser",
++ "parserOptions": {
++   "project": "./tsconfig.json"
 + }
 }
 ```
 
-<details>
-<summary><strong>FAQ</strong>: If you got this error when running ESLint: "The file must be included in at least one of the projects provided"</summary>
+### FAQ
 
-This means you are attempting to lint a file that `tsconfig.json` doesn't include.
+If you got this error when running ESLint: _"The file must be included in at least one of the projects provided"_, this means you are attempting to lint a file that `tsconfig.json` doesn't include.
 
 A common fix is to create a `tsconfig.eslint.json` file, which extends your `tsconfig.json` file and includes all files you are linting.
 
 ```json
 {
   "extends": "./tsconfig.json",
-  "include": ["src/**/*.ts", "src/**/*.js", "test/**/*.ts"]
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", ".eslintrc.js"]
 }
 ```
 
-Update your ESLint config file:
+Then update your ESLint config file:
 
 ```diff
-parserOptions: {
--  project: './tsconfig.json',
-+  project: './tsconfig.eslint.json',
+"parserOptions": {
+-  "project": "./tsconfig.json"
++  "project": "./tsconfig.eslint.json"
 }
 ```
 
-</details>
+---
 
 ## Note
 
