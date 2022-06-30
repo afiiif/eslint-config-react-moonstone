@@ -42,6 +42,15 @@ module.exports = {
     'unicorn/no-array-for-each': 'off',
     'unicorn/no-await-expression-member': 'warn',
     'unicorn/import-index': 'error',
+    'unicorn/filename-case': [
+      'error',
+      {
+        cases: {
+          kebabCase: true,
+          camelCase: true,
+        },
+      },
+    ],
 
     // Sonar
     'sonarjs/cognitive-complexity': 'warn',
