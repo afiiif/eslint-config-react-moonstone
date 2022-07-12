@@ -5,12 +5,20 @@ ESLint config for React TypeScript projects.
 This config extends [eslint-config-airbnb-typescript](https://www.npmjs.com/package/eslint-config-airbnb-typescript) and [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier).
 It provides some useful plugins which will improve your code quality.
 
-## Installation (including peer dependencies)
+## Installation
 
 ```sh
-npm install -D eslint-config-react-moonstone @typescript-eslint/eslint-plugin @typescript-eslint/parser
+npm install -D eslint-config-react-moonstone
 # or with yarn
-yarn add -D eslint-config-react-moonstone @typescript-eslint/eslint-plugin @typescript-eslint/parser
+yarn add -D eslint-config-react-moonstone
+```
+
+### Install peer dependencies
+
+```sh
+npm install -D @typescript-eslint/eslint-plugin @typescript-eslint/parser
+# or with yarn
+yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser
 ```
 
 ## Setup
