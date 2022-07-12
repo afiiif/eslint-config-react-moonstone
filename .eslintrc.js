@@ -35,13 +35,14 @@ module.exports = {
 
     // Unicorn
     'unicorn/prefer-module': 'warn',
+    'unicorn/no-await-expression-member': 'warn',
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/no-null': 'off',
     'unicorn/no-array-callback-reference': 'off',
     'unicorn/no-array-reduce': 'off',
     'unicorn/no-array-for-each': 'off',
-    'unicorn/no-await-expression-member': 'warn',
-    'unicorn/import-index': 'error',
+    'unicorn/prefer-number-properties': 'off',
+    'unicorn/new-for-builtins': 'off',
     'unicorn/filename-case': [
       'error',
       {
